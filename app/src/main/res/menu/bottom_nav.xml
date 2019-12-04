@@ -6,26 +6,26 @@
         android:id="@+id/informationFragment"
         android:icon="@drawable/ic_information"
         android:title="@string/menu_information"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/searchFragment"
         android:icon="@drawable/ic_search"
         android:title="@string/menu_search"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/additionFragment"
         android:icon="@drawable/ic_addition"
         android:title="@string/menu_addition"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/chatFragment"
         android:icon="@drawable/ic_chat"
         android:title="@string/menu_chat"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
     <item
         android:id="@+id/profileFragment"
         android:icon="@drawable/ic_profile"
         android:title="@string/menu_profile"
-        app:showAsAction="always" />
+        app:showAsAction="ifRoom" />
 
 </menu>

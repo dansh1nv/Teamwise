@@ -1,13 +1,116 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:paddingLeft="16dp"
+    android:paddingRight="16dp"
     tools:context=".ui.addition.AdditionFragment">
 
     <TextView
+        android:id="@+id/addition_information"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="Добавление" />
+        android:layout_height="wrap_content"
+        android:text="Чтобы пригласить участников, опишите свое мероприятие,
+         добавьте фотографии и разместите у себя в ленте"
+        app:layout_constraintBottom_toTopOf="@id/addition_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/addition_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/addition_name"
+        app:layout_constraintBottom_toTopOf="@id/addition_description"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addition_information" />
+
+    <EditText
+        android:id="@+id/addition_description"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/addition_description"
+        app:layout_constraintBottom_toTopOf="@id/addition_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addition_name" />
+
+    <EditText
+        android:id="@+id/addition_date"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/addition_date"
+        app:layout_constraintBottom_toBottomOf="@id/addition_photo"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addition_description" />
+
+    <ImageButton
+        android:src="@drawable/ic_add_photo"
+        android:background="?android:selectableItemBackground"
+        android:id="@+id/addition_photo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintEnd_toStartOf="@id/additionPhotoInform"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addition_date"
+        app:layout_constraintBottom_toTopOf="@id/recycler_view_photo"/>
+
+    <TextView
+        android:id="@+id/additionPhotoInform"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/addition_photo_inform"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/recycler_view_photo"
+        app:layout_constraintStart_toEndOf="@id/addition_photo"
+        app:layout_constraintTop_toBottomOf="@id/addition_date" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycler_view_photo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:itemCount="3"
+        tools:layoutManager="GridLayoutManager"
+        tools:spanCount="5"
+        tools:listitem="@layout/item_profile_event_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addition_photo"
+        app:layout_constraintBottom_toTopOf="@id/addition_tag"
+         />
+
+    <EditText
+        android:id="@+id/addition_tag"
+        android:hint="@string/addition_tag_hint"
+        app:layout_constraintTop_toBottomOf="@id/recycler_view_photo"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/addition_tag_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:text="@string/addition_tags"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addition_tag"
+        android:id="@+id/addition_tag_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toTopOf="@id/addition_button_create"/>
+
+    <Button
+        android:id="@+id/addition_button_create"
+        android:text="@string/addition_button_create"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/addition_tag_information"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

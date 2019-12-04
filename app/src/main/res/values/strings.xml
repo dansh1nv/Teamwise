@@ -1,8 +1,47 @@
 <resources>
     <string name="app_name">Teamwise</string>
+
+    <!--Menu-->
     <string name="menu_profile">Профиль</string>
     <string name="menu_chat">Чат</string>
     <string name="menu_addition">Новое</string>
     <string name="menu_search">Поиск</string>
     <string name="menu_information">Лента</string>
+
+    <!--Addition Fragment-->
+    <string name="addition_date">Введите дату</string>
+    <string name="addition_description">Описание</string>
+    <string name="addition_name">Название</string>
+    <string name="addition_photo_inform">Добавить фото (максимум 5)</string>
+    <string name="addition_button_create">Создать</string>
+    <string name="addition_tags">Теги</string>
+    <string name="addition_tag_hint">Добавьте теги</string>
+    <!---->
+
+    <!--Profile Fragment-->
+    <string name="profile_city">New York</string>
+    <string name="profile_login">Mattway_New</string>
+    <string name="profile_name">Виктор</string>
+    <string name="profile_description">Я обычный человек с обычными мыслями и жизнь прожил самую обыкновенную.
+        Мне не поставят памятник, имя мое скоро забудется, и все же я познал любовь, и мне этого достаточно.</string>
+    <string name="profile_subscriber">Подписчики</string>
+    <string name="profile_subscription">Подписки</string>
+    <string name="profile_member">Участник</string>
+    <string name="profile_organizer">Организатор</string>
+    <string name="profile_count_subscriber">181</string>
+    <string name="profile_count_subscription">181</string>
+    <string name="profile_count_member">181</string>
+    <string name="profile_count_organizer">181</string>
+    <string name="profile_button_subscribe">Подписаться</string>
+    <string name="profile_tab_organizer">Организатор</string>
+    <string name="profile_tab_member">Участник</string>
+    <!--Item Information-->
+    <string name="item_information_creator">Создал</string>
+    <string name="item_information_creator_name">Андрей Антонов</string>
+    <string name="item_information_description">На бесплатном уроке гости узнают о прибыльной профессии «Тестировщик ПО», примут…</string>
+    <string name="item_information_button">Принять участие</string>
+    <string name="item_information_name">Бесплатные практические уроки «Как за 1 месяц овладеть профессией „Тестировщик ПО“»</string>
+    <!---->
+
+
 </resources>
