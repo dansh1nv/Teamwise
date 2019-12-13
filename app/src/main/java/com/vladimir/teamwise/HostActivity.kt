@@ -9,6 +9,7 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
+import com.mapbox.mapboxsdk.Mapbox
 import kotlinx.android.synthetic.main.activity_host.*
 
 class HostActivity : AppCompatActivity() {
@@ -21,7 +22,7 @@ class HostActivity : AppCompatActivity() {
         setContentView(R.layout.activity_host)
         setSupportActionBar(toolbar)
 
-        
+        Mapbox.getInstance(applicationContext, getString(R.string.mapbox_access_token));
 
         val host: NavHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment? ?: return

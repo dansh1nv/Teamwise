@@ -3,4 +3,8 @@
 
     <dimen name="sub_inform_text_size">12sp</dimen>
 
+    <dimen name="small">8dp</dimen>
+    <dimen name="large">16dp</dimen>
+
+
 </resources>

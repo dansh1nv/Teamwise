@@ -1,5 +1,8 @@
 <resources>
     <string name="app_name">Teamwise</string>
+    <string name="mapbox_access_token">
+        pk.eyJ1IjoiZGFuc2gxbnYiLCJhIjoiY2syamozMWU4MHB5eTNtb2V6bXg1dDhpNyJ9.k0vnLpoJKzx3rrLnMOn93Q
+    </string>
 
     <!--Menu-->
     <string name="menu_profile">Профиль</string>
@@ -9,6 +12,7 @@
     <string name="menu_information">Лента</string>
 
     <!--Addition Fragment-->
+    <string name="addition_information">Чтобы пригласить участников, опишите свое мероприятие, добавьте фотографии и разместите у себя в ленте</string>
     <string name="addition_date">Введите дату</string>
     <string name="addition_description">Описание</string>
     <string name="addition_name">Название</string>
@@ -42,6 +46,11 @@
     <string name="item_information_button">Принять участие</string>
     <string name="item_information_name">Бесплатные практические уроки «Как за 1 месяц овладеть профессией „Тестировщик ПО“»</string>
     <!---->
+
+    <!--Basic user location permission toasts-->
+    <string name="user_location_permission_explanation">This app needs location permissions in order to show its functionality.</string>
+    <string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
+
 
 
 </resources>

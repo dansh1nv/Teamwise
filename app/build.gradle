@@ -78,8 +78,15 @@ dependencies {
 
     implementation "androidx.legacy:legacy-support-v4:1.0.0"
 
+    //Tags view
+    implementation 'me.gujun.android.taggroup:library:1.4@aar'
+
     // Material Design
     implementation 'com.google.android.material:material:1.0.0'
+
+    //Mapbox
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:8.5.0'
+    implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-localization-v8:0.11.0'
 
     // Preference
     implementation "androidx.preference:preference:1.1.0"
