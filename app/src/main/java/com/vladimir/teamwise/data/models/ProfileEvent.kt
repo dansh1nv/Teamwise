@@ -1,4 +1,5 @@
 package com.vladimir.teamwise.data.models
 
-class ProfileEvent {
-}
+data class ProfileEvent (
+    val url : String?
+)
