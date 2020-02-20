@@ -12,8 +12,8 @@
     </style>
 
     <style name="ToolbarTheme" parent="ThemeOverlay.MaterialComponents.ActionBar">
-        <item name="android:textColorPrimary">@android:color/white</item>
-        <item name="android:textColorSecondary">#EEEEEE</item>
+        <item name="android:textColorPrimary">#56565A</item>
+        <item name="android:background">@color/toolbar_background</item>
     </style>
 
 </resources>
