@@ -17,7 +17,9 @@
         android:theme="@style/AppTheme"
         tools:ignore="GoogleAppIndexingWarning">
         <activity android:name=".HostActivity"
-            android:windowSoftInputMode="adjustResize">
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:windowSoftInputMode="adjustPan|stateHidden"
+            >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
