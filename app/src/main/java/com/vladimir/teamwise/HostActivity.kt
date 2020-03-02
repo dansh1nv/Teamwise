@@ -22,7 +22,7 @@ class HostActivity : AppCompatActivity() {
         setContentView(R.layout.activity_host)
         setSupportActionBar(toolbar)
 
-        Mapbox.getInstance(applicationContext, getString(R.string.mapbox_access_token));
+        Mapbox.getInstance(applicationContext, getString(R.string.mapbox_access_token))
 
         val host: NavHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment? ?: return
