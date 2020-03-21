@@ -50,7 +50,27 @@
     <!--Basic user location permission toasts-->
     <string name="user_location_permission_explanation">This app needs location permissions in order to show its functionality.</string>
     <string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
-    <string name="find_interesting">Интересное рядом</string>
+    <!---->
 
+    <string name="find_interesting">Интересное рядом</string>
+    <!---->
+
+    <!--Start Fragment-->
+    <string name="reg_button">Создать аккаунт</string>
+    <string name="auth_button">Войти</string>
+    <!---->
+
+    <!--Auth Fragment-->
+    <string name="edittext_pass">Пароль</string>
+    <string name="edittext_login">Логин</string>
+    <!---->
+
+    <!--Registration Fragment-->
+    <string name="regfrag_reg_button">Регистрация</string>
+    <string name="regfrag_edittext_email">Эл.почта</string>
+    <string name="regfrag_edittext_userinfo">Имя и фамилия</string>
+    <string name="regfrag_edittext_username">Имя пользователя</string>
+    <string name="regfrag_edittext_password">Пароль</string>
+    <!---->
 
 </resources>
