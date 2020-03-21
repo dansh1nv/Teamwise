@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.registration.RegistrationFragment">
+
+    <ImageView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/regfrag_edittext_email"
+        android:src="@mipmap/ic_launcher"
+        android:layout_width="@dimen/logo"
+        android:layout_height="@dimen/logo"/>
+
+    <EditText
+        android:id="@+id/regfrag_edittext_email"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/large"
+        android:background="@drawable/edit_text_style"
+        android:hint="@string/regfrag_edittext_email"
+        android:padding="@dimen/padding_in_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/regfrag_edittext_userinfo"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/regfrag_edittext_userinfo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/large"
+        android:background="@drawable/edit_text_style"
+        android:hint="@string/regfrag_edittext_userinfo"
+        android:padding="@dimen/padding_in_edittext"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/regfrag_edittext_username"/>
+
+    <EditText
+        android:id="@+id/regfrag_edittext_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/large"
+        android:background="@drawable/edit_text_style"
+        android:hint="@string/regfrag_edittext_username"
+        android:padding="@dimen/padding_in_edittext"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/regfrag_edittext_password"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/large"
+        android:background="@drawable/edit_text_style"
+        android:hint="@string/regfrag_edittext_password"
+        android:padding="@dimen/padding_in_edittext"
+        app:layout_constraintTop_toBottomOf="@+id/regfrag_edittext_username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <Button
+        app:layout_constraintTop_toBottomOf="@+id/regfrag_edittext_password"
+        android:id="@+id/regfrag_reg_button"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/large"
+        android:padding="@dimen/large"
+        android:text="@string/regfrag_reg_button"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
