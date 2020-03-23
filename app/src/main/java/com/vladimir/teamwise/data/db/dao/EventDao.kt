@@ -13,7 +13,7 @@ interface EventDao {
     fun addEvent(event: Event)
 
     @Query("DELETE FROM event_table WHERE title LIKE :eventTitle")
-    fun deleteEvent(eventTitle: String): LiveData<Event>
+    fun deleteEvent(eventTitle: String)
 
     @Query("SELECT * FROM event_table")
     fun getAllEvent(): LiveData<List<Event>>
