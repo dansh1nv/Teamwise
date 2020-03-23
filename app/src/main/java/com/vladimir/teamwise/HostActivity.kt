@@ -3,13 +3,13 @@ package com.vladimir.teamwise
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.navigation.NavController
-import androidx.navigation.NavGraph
-import androidx.navigation.Navigation
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
+import androidx.room.Room
 import com.mapbox.mapboxsdk.Mapbox
+import com.vladimir.teamwise.data.db.AppDatabase
 import kotlinx.android.synthetic.main.activity_host.*
 
 class HostActivity : AppCompatActivity() {
@@ -23,7 +23,18 @@ class HostActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         Mapbox.getInstance(applicationContext, getString(R.string.mapbox_access_token))
+        initDatabase()
+        initNavigation()
+    }
 
+    private fun initDatabase() {
+        val db = Room.databaseBuilder(
+            applicationContext,
+            AppDatabase::class.java, "teamwise.db"
+        ).build()
+    }
+
+    private fun initNavigation() {
         val host: NavHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment? ?: return
         val navController = host.navController
@@ -40,7 +51,6 @@ class HostActivity : AppCompatActivity() {
             )
         )
         NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
-
     }
 
 }
