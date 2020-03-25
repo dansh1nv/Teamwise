@@ -10,7 +10,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.room.Room
 import com.mapbox.mapboxsdk.Mapbox
 import com.vladimir.teamwise.data.db.AppDatabase
-import kotlinx.android.synthetic.main.activity_host.*
+import kotlinx.android.synthetic.main.host_activity.*
 
 class HostActivity : AppCompatActivity() {
 
@@ -19,7 +19,7 @@ class HostActivity : AppCompatActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_host)
+        setContentView(R.layout.host_activity)
         setSupportActionBar(toolbar)
 
         Mapbox.getInstance(applicationContext, getString(R.string.mapbox_access_token))
