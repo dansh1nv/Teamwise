@@ -3,52 +3,101 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/information_fragment">
+    app:startDestination="@id/start_dest">
 
     <fragment
-        android:id="@+id/information_fragment"
+        android:id="@+id/information_dest"
         android:name="com.vladimir.teamwise.ui.information.InformationFragment"
         android:label="information_fragment"
-        tools:layout="@layout/information_fragment" />
+        tools:layout="@layout/information_fragment" >
+        <argument
+            android:name="informationArgument"
+            app:argType="string"
+            android:defaultValue="information"/>
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/informaion_detail_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
 
     <fragment
-        android:id="@+id/search_fragment"
+        android:id="@+id/informaion_detail_dest"
+        android:name="com.vladimir.teamwise.ui.informationdetail.InformaionDetailFragment"
+        android:label="informaion_detail_fragment"
+        tools:layout="@layout/informaion_detail_fragment">
+        <argument
+            android:name="informationDetailArgument"
+            app:argType="string"
+            android:defaultValue="informationDetail"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/search_dest"
         android:name="com.vladimir.teamwise.ui.search.SearchFragment"
         android:label="search_fragment"
-        tools:layout="@layout/search_fragment" />
+        tools:layout="@layout/search_fragment">
+        <argument
+            android:name="searchArgument"
+            app:argType="string"
+            android:defaultValue="search"/>
+    </fragment>
 
     <fragment
-        android:id="@+id/addition_fragment"
+        android:id="@+id/addition_dest"
         android:name="com.vladimir.teamwise.ui.addition.AdditionFragment"
         android:label="addition_fragment"
-        tools:layout="@layout/addition_fragment" />
+        tools:layout="@layout/addition_fragment">
+    </fragment>
 
     <fragment
-        android:id="@+id/chatroom_fragment"
+        android:id="@+id/chatroom_dest"
         android:name="com.vladimir.teamwise.ui.chatroom.ChatRoomFragment"
         android:label="chat_fragment"
-        tools:layout="@layout/chatroom_fragment" />
+        tools:layout="@layout/chatroom_fragment" >
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/chat_dest"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
 
     <fragment
-        android:id="@+id/profile_fragment"
+        android:id="@+id/chat_dest"
+        android:name="com.vladimir.teamwise.ui.chat.ChatFragment"
+        android:label="chat_fragment"
+        tools:layout="@layout/chat_fragment">
+        <argument
+            android:name="chatArgument"
+            app:argType="string"
+            android:defaultValue="chat"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/profile_dest"
         android:name="com.vladimir.teamwise.ui.profile.ProfileFragment"
         android:label="profile_fragment"
-        tools:layout="@layout/profile_fragment" />
+        tools:layout="@layout/profile_fragment">
+    </fragment>
 
     <fragment
-        android:id="@+id/start_fragment"
+        android:id="@+id/start_dest"
         android:name="com.vladimir.teamwise.ui.start.StartFragment"
         android:label="StartFragment">
         <action
             android:id="@+id/reg_action"
-            app:destination="@id/registration_fragment"
+            app:destination="@+id/registration_dest"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right" />
         <action
             android:id="@+id/auth_action"
-            app:destination="@id/auth_fragment"
+            app:destination="@+id/auth_dest"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -56,13 +105,17 @@
     </fragment>
 
     <fragment
-        android:id="@+id/registration_fragment"
+        android:id="@+id/registration_dest"
         android:name="com.vladimir.teamwise.ui.registration.RegistrationFragment"
         android:label="registration_fragment"
         tools:layout="@layout/registration_fragment">
+        <argument
+            android:name="registrationArgument"
+            app:argType="string"
+            android:defaultValue="registration"/>
         <action
             android:id="@+id/next_action"
-            app:destination="@id/information_fragment"
+            app:destination="@id/information_dest"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
@@ -70,18 +123,34 @@
     </fragment>
 
     <fragment
-        android:id="@+id/auth_fragment"
+        android:id="@+id/auth_dest"
         android:name="com.vladimir.teamwise.ui.auth.AuthFragment"
         android:label="auth_fragment"
         tools:layout="@layout/auth_fragment">
+        <argument
+            android:name="authArgument"
+            app:argType="string"
+            android:defaultValue="auth"/>
         <action
             android:id="@+id/next_action"
-            app:destination="@id/information_fragment"
+            app:destination="@id/information_dest"
             app:enterAnim="@anim/slide_in_right"
             app:exitAnim="@anim/slide_out_left"
             app:popEnterAnim="@anim/slide_in_left"
             app:popExitAnim="@anim/slide_out_right"/>
 
     </fragment>
+
+    <fragment
+        android:id="@+id/settings_dest"
+        android:name="com.vladimir.teamwise.ui.settings.SettingsFragment"
+        android:label="settings_fragment"
+        tools:layout="@layout/settings_fragment">
+        <argument
+            android:name="settingsArgument"
+            app:argType="string"
+            android:defaultValue="settings"/>
+    </fragment>
+
 
 </navigation>

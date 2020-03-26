@@ -71,6 +71,8 @@
     <string name="regfrag_edittext_userinfo">Имя и фамилия</string>
     <string name="regfrag_edittext_username">Имя пользователя</string>
     <string name="regfrag_edittext_password">Пароль</string>
+    <string name="infofrag_tw_emptylist">Список событий пуст</string>
+    <string name="chatroomfrag_tw_emptyList">Список чатов пуст</string>
     <!---->
 
 </resources>

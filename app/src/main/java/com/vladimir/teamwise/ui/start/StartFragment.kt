@@ -7,8 +7,10 @@ import android.view.ViewGroup
 import android.widget.Button
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
 import com.vladimir.teamwise.R
+import kotlinx.android.synthetic.main.host_activity.*
 
 
 class StartFragment : Fragment() {
@@ -28,15 +30,17 @@ class StartFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+
         view.findViewById<Button>(R.id.reg_button)?.setOnClickListener {
-            val regNumberArg = 1
-            /*val action = StartFragmentDirection.regAction(regNumberArg)
-            findNavController().navigate(action)*/
+            val regStringArg = "registration"
+            val action = StartFragmentDirections.regAction(regStringArg)
+            findNavController().navigate(action)
         }
-        view.findViewById<Button>(R.id.auth_button)?.setOnClickListener {
-            val authNumberArg = 2
-            /*val action = StartFragmentDirection.authAction(authNumberArg)
-            findNavController().navigate(action)*/
+
+        view.findViewById<Button>(R.id.auth_button)?.setOnClickListener() {
+            val authStringArg = "auth"
+            val action = StartFragmentDirections.authAction(authStringArg)
+            findNavController().navigate(action)
         }
     }
 

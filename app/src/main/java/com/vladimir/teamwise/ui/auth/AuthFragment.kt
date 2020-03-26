@@ -6,6 +6,10 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Button
+import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
+import androidx.navigation.fragment.navArgs
 
 import com.vladimir.teamwise.R
 
@@ -24,9 +28,18 @@ class AuthFragment : Fragment() {
         return inflater.inflate(R.layout.auth_fragment, container, false)
     }
 
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        view.findViewById<Button>(R.id.authfrag_auth_button).setOnClickListener {
+            val informationStringArg = "information"
+            val action = AuthFragmentDirections.nextAction(informationStringArg)
+            findNavController().navigate(action)
+        }
+    }
+
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProviders.of(this).get(AuthViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(AuthViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
