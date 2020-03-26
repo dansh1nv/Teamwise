@@ -9,8 +9,10 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.Navigation
 import androidx.navigation.fragment.findNavController
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.vladimir.teamwise.R
 import kotlinx.android.synthetic.main.host_activity.*
+import kotlinx.android.synthetic.main.host_activity.view.*
 
 
 class StartFragment : Fragment() {
@@ -46,6 +48,7 @@ class StartFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        activity?.findViewById<BottomNavigationView>(R.id.bottom_nav_view)?.visibility = View.GONE
         viewModel = ViewModelProvider(this).get(StartViewModel::class.java)
         // TODO: Use the ViewModel
     }

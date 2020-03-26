@@ -10,8 +10,10 @@ import android.widget.Button
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import androidx.navigation.fragment.navArgs
+import com.google.android.material.bottomnavigation.BottomNavigationView
 
 import com.vladimir.teamwise.R
+import kotlinx.android.synthetic.main.host_activity.view.*
 
 class AuthFragment : Fragment() {
 
@@ -35,10 +37,12 @@ class AuthFragment : Fragment() {
             val action = AuthFragmentDirections.nextAction(informationStringArg)
             findNavController().navigate(action)
         }
+        //view.bottom_nav_view.visibility = View.GONE
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        activity?.findViewById<BottomNavigationView>(R.id.bottom_nav_view)?.visibility = View.GONE
         viewModel = ViewModelProvider(this).get(AuthViewModel::class.java)
         // TODO: Use the ViewModel
     }
