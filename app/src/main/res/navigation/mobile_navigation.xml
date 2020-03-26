@@ -3,31 +3,85 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@id/informationFragment">
+    app:startDestination="@id/information_fragment">
 
     <fragment
-        android:id="@+id/informationFragment"
+        android:id="@+id/information_fragment"
         android:name="com.vladimir.teamwise.ui.information.InformationFragment"
         android:label="information_fragment"
         tools:layout="@layout/information_fragment" />
+
     <fragment
-        android:id="@+id/searchFragment"
+        android:id="@+id/search_fragment"
         android:name="com.vladimir.teamwise.ui.search.SearchFragment"
         android:label="search_fragment"
         tools:layout="@layout/search_fragment" />
+
     <fragment
-        android:id="@+id/additionFragment"
+        android:id="@+id/addition_fragment"
         android:name="com.vladimir.teamwise.ui.addition.AdditionFragment"
         android:label="addition_fragment"
         tools:layout="@layout/addition_fragment" />
+
     <fragment
-        android:id="@+id/chatFragment"
-        android:name="com.vladimir.teamwise.ui.chat.ChatFragment"
+        android:id="@+id/chatroom_fragment"
+        android:name="com.vladimir.teamwise.ui.chatroom.ChatRoomFragment"
         android:label="chat_fragment"
-        tools:layout="@layout/chat_fragment" />
+        tools:layout="@layout/chatroom_fragment" />
+
     <fragment
-        android:id="@+id/profileFragment"
+        android:id="@+id/profile_fragment"
         android:name="com.vladimir.teamwise.ui.profile.ProfileFragment"
         android:label="profile_fragment"
         tools:layout="@layout/profile_fragment" />
+
+    <fragment
+        android:id="@+id/start_fragment"
+        android:name="com.vladimir.teamwise.ui.start.StartFragment"
+        android:label="StartFragment">
+        <action
+            android:id="@+id/reg_action"
+            app:destination="@id/registration_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+        <action
+            android:id="@+id/auth_action"
+            app:destination="@id/auth_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/registration_fragment"
+        android:name="com.vladimir.teamwise.ui.registration.RegistrationFragment"
+        android:label="registration_fragment"
+        tools:layout="@layout/registration_fragment">
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/information_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/auth_fragment"
+        android:name="com.vladimir.teamwise.ui.auth.AuthFragment"
+        android:label="auth_fragment"
+        tools:layout="@layout/auth_fragment">
+        <action
+            android:id="@+id/next_action"
+            app:destination="@id/information_fragment"
+            app:enterAnim="@anim/slide_in_right"
+            app:exitAnim="@anim/slide_out_left"
+            app:popEnterAnim="@anim/slide_in_left"
+            app:popExitAnim="@anim/slide_out_right"/>
+
+    </fragment>
+
 </navigation>

@@ -8,6 +8,7 @@ import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.NavigationUI
 import androidx.navigation.ui.setupWithNavController
 import androidx.room.Room
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.mapbox.mapboxsdk.Mapbox
 import com.vladimir.teamwise.data.db.AppDatabase
 import kotlinx.android.synthetic.main.host_activity.*
@@ -37,20 +38,15 @@ class HostActivity : AppCompatActivity() {
     private fun initNavigation() {
         val host: NavHostFragment = supportFragmentManager
             .findFragmentById(R.id.nav_host_fragment) as NavHostFragment? ?: return
-        val navController = host.navController
-        bottom_nav.setupWithNavController(navController)
-        val appBarConfiguration = AppBarConfiguration(navController.graph)
+        navController = host.navController
+        appBarConfiguration = AppBarConfiguration(navController.graph)
 
-        AppBarConfiguration(
-            setOf(
-                R.id.additionFragment,
-                R.id.chatFragment,
-                R.id.informationFragment,
-                R.id.profileFragment,
-                R.id.searchFragment
-            )
-        )
-        NavigationUI.setupActionBarWithNavController(this, navController, appBarConfiguration)
+        setupBottomNavMenu(navController)
+    }
+
+    private fun setupBottomNavMenu(navController: NavController){
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_view)
+        bottomNav?.setupWithNavController(navController)
     }
 
 }

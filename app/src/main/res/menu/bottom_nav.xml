@@ -3,27 +3,27 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/informationFragment"
+        android:id="@+id/information_fragment"
         android:icon="@drawable/ic_information"
         android:title="@string/menu_information"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/searchFragment"
+        android:id="@+id/search_fragment"
         android:icon="@drawable/ic_search"
         android:title="@string/menu_search"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/additionFragment"
+        android:id="@+id/addition_fragment"
         android:icon="@drawable/ic_addition"
         android:title="@string/menu_addition"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/chatFragment"
+        android:id="@+id/chatroom_fragment"
         android:icon="@drawable/ic_chat"
         android:title="@string/menu_chat"
         app:showAsAction="ifRoom" />
     <item
-        android:id="@+id/profileFragment"
+        android:id="@+id/profile_fragment"
         android:icon="@drawable/ic_profile"
         android:title="@string/menu_profile"
         app:showAsAction="ifRoom" />

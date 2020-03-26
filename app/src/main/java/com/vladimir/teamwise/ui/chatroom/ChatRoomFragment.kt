@@ -1,33 +1,31 @@
-package com.vladimir.teamwise.ui.chat
+package com.vladimir.teamwise.ui.chatroom
 
-import androidx.lifecycle.ViewModelProviders
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-
 import com.vladimir.teamwise.R
 
-class ChatFragment : Fragment() {
+class ChatRoomFragment : Fragment() {
 
     companion object {
-        fun newInstance() = ChatFragment()
+        fun newInstance() = ChatRoomFragment()
     }
 
-    private lateinit var viewModel: ChatViewModel
+    private lateinit var viewModel: ChatRoomViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        return inflater.inflate(R.layout.chat_fragment, container, false)
+        return inflater.inflate(R.layout.chatroom_fragment, container, false)
     }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(ChatViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(ChatRoomViewModel::class.java)
         // TODO: Use the ViewModel
     }
 

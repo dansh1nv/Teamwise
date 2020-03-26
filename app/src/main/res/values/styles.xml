@@ -17,7 +17,7 @@
     </style>
 
     <style name="ButtonWithBorder" parent="Widget.MaterialComponents.Button.OutlinedButton">
-        <item name="strokeWidth">2dp</item>
+        <item name="strokeWidth">1dp</item>
     </style>
 
 </resources>
