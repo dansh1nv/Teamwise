@@ -11,7 +11,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintBottom_toTopOf="@+id/regfrag_edittext_email"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/teamwiselogo"
         android:layout_width="@dimen/logo"
         android:layout_height="@dimen/logo"/>
 

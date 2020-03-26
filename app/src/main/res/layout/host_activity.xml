@@ -25,9 +25,8 @@
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/bottom_nav_view"
         android:layout_width="match_parent"
-        app:labelVisibilityMode="labeled"
         android:layout_height="?attr/actionBarSize"
-        android:visibility="gone"
+        app:labelVisibilityMode="labeled"
         app:menu="@menu/bottom_nav" />
 
 </LinearLayout>

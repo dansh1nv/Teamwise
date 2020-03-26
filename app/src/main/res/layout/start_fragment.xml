@@ -9,7 +9,7 @@
         android:id="@+id/auth_logo"
         android:layout_width="@dimen/logo"
         android:layout_height="@dimen/logo"
-        android:src="@mipmap/ic_launcher"
+        android:src="@drawable/teamwiselogo"
         app:layout_constraintBottom_toTopOf="@id/auth_button"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
