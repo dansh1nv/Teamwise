@@ -19,15 +19,6 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
-    <!--    <androidx.appcompat.widget.SearchView
-            android:id="@+id/searchView_chat"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/large"
-            android:layout_marginStart="@dimen/large"
-            android:layout_marginEnd="@dimen/large"
-            />-->
-
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recycler_view_item_chat"
         android:layout_width="match_parent"
