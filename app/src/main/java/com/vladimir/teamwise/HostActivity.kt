@@ -24,6 +24,7 @@ class HostActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         Mapbox.getInstance(applicationContext, getString(R.string.mapbox_access_token))
+
         initDatabase()
         initNavigation()
     }

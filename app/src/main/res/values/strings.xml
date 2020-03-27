@@ -1,8 +1,9 @@
 <resources>
-    <string name="app_name">Teamwise</string>
+    <string name="tw_app_name">Teamwise</string>
     <string name="mapbox_access_token">
         pk.eyJ1IjoiZGFuc2gxbnYiLCJhIjoiY2syamozMWU4MHB5eTNtb2V6bXg1dDhpNyJ9.k0vnLpoJKzx3rrLnMOn93Q
     </string>
+    <string name="tw_logo_content_description">Teamwise Logo</string>
 
     <!--Menu-->
     <string name="menu_profile">Профиль</string>
@@ -55,24 +56,17 @@
     <string name="find_interesting">Интересное рядом</string>
     <!---->
 
-    <!--Start Fragment-->
     <string name="reg_button">Создать аккаунт</string>
     <string name="auth_button">Войти</string>
-    <!---->
-
-    <!--Auth Fragment-->
-    <string name="edittext_pass">Пароль</string>
-    <string name="edittext_login">Логин</string>
-    <!---->
-
-    <!--Registration Fragment-->
-    <string name="regfrag_reg_button">Регистрация</string>
-    <string name="regfrag_edittext_email">Эл.почта</string>
-    <string name="regfrag_edittext_userinfo">Имя и фамилия</string>
-    <string name="regfrag_edittext_username">Имя пользователя</string>
-    <string name="regfrag_edittext_password">Пароль</string>
-    <string name="infofrag_tw_emptylist">Список событий пуст</string>
-    <string name="chatroomfrag_tw_emptyList">Список чатов пуст</string>
+    <string name="tw_hint_password">Пароль</string>
+    <string name="tw_hint_username">Имя пользователя</string>
+    <string name="tw_button_back">Назад</string>
+    <string name="tw_button_auth">Войти</string>
+    <string name="tw_button_reg">Регистрация</string>
+    <string name="tw_hint_email">Эл.почта</string>
+    <string name="tw_hint_userinfo">Имя и фамилия</string>
+    <string name="tw_text_view_emptylist">Список событий пуст</string>
+    <string name="tw_text_view_emptyList">Список чатов пуст</string>
     <!---->
 
 </resources>

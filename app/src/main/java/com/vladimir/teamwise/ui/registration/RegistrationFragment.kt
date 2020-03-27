@@ -13,6 +13,7 @@ import androidx.navigation.fragment.navArgs
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 import com.vladimir.teamwise.R
+import kotlinx.android.synthetic.main.host_activity.*
 import kotlinx.android.synthetic.main.host_activity.view.*
 
 class RegistrationFragment : Fragment() {
@@ -32,7 +33,7 @@ class RegistrationFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<Button>(R.id.regfrag_reg_button).setOnClickListener {
+        view.findViewById<Button>(R.id.reg_button).setOnClickListener {
             val informationStringArg = "information"
             val action = RegistrationFragmentDirections.nextAction(informationStringArg)
             findNavController().navigate(action)
@@ -41,7 +42,8 @@ class RegistrationFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        activity?.findViewById<BottomNavigationView>(R.id.bottom_nav_view)?.visibility = View.GONE
+        activity?.bottom_nav_view?.visibility = View.GONE
+        activity?.toolbar?.visibility = View.GONE
         viewModel = ViewModelProvider(this).get(RegistrationViewModel::class.java)
         // TODO: Use the ViewModel
     }

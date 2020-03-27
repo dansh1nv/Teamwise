@@ -13,6 +13,7 @@ import androidx.navigation.fragment.navArgs
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 import com.vladimir.teamwise.R
+import kotlinx.android.synthetic.main.host_activity.*
 import kotlinx.android.synthetic.main.host_activity.view.*
 
 class AuthFragment : Fragment() {
@@ -32,7 +33,7 @@ class AuthFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<Button>(R.id.authfrag_auth_button).setOnClickListener {
+        view.findViewById<Button>(R.id.auth_button).setOnClickListener {
             val informationStringArg = "information"
             val action = AuthFragmentDirections.nextAction(informationStringArg)
             findNavController().navigate(action)
@@ -42,7 +43,8 @@ class AuthFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        activity?.findViewById<BottomNavigationView>(R.id.bottom_nav_view)?.visibility = View.GONE
+        activity?.bottom_nav_view?.visibility = View.GONE
+        activity?.toolbar?.visibility = View.GONE
         viewModel = ViewModelProvider(this).get(AuthViewModel::class.java)
         // TODO: Use the ViewModel
     }

@@ -28,6 +28,7 @@ class InformationFragment : Fragment() {
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         activity?.bottom_nav_view?.visibility = View.VISIBLE
+        activity?.toolbar?.visibility = View.VISIBLE
         viewModel = ViewModelProvider(this).get(InformationViewModel::class.java)
         // TODO: Use the ViewModel
     }

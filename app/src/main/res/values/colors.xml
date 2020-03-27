@@ -1,9 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#273C76</color>
-    <color name="colorPrimaryDark">#D8D8D8</color>
-    <color name="colorAccent">#5866A5</color>
+    <color name="colorPrimary">#FFCF44</color>
+    <color name="colorPrimaryDark">#FD9725</color>
+    <color name="colorAccent">#FD9725</color>
+    <color name="colorOnPrimary">#FFFFFF</color>
+    <color name="colorError">#FD9725</color>
+    <color name="toolbarIconColor">#FFFFFF</color>
     <color name="ic_launcher_background">#FFFFFF</color>
     <color name="toolbar_background">#FFFFFF</color>
     <color name="colorBlack">#000000</color>
+    <color name="loginPageBackgroundColor">#FFFFFF</color>
+    <color name="textColorPrimary">#442C2E</color>
+    <color name="textInputOutlineColor">#FBB8AC</color>
 </resources>

@@ -48,7 +48,8 @@ class StartFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
-        activity?.findViewById<BottomNavigationView>(R.id.bottom_nav_view)?.visibility = View.GONE
+        activity?.bottom_nav_view?.visibility = View.GONE
+        activity?.toolbar?.visibility = View.GONE
         viewModel = ViewModelProvider(this).get(StartViewModel::class.java)
         // TODO: Use the ViewModel
     }

@@ -10,7 +10,7 @@
         android:id="@+id/chatroomfrag_tw_emptyList"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/chatroomfrag_tw_emptyList"
+        android:text="@string/tw_text_view_emptyList"
         android:textAlignment="center"
         android:textColor="@color/colorBlack"
         android:textSize="20sp"

@@ -84,7 +84,7 @@ dependencies {
     implementation 'me.gujun.android.taggroup:library:1.4@aar'
 
     // Material Design
-    implementation "com.google.android.material:material:$materialVersion"
+    api "com.google.android.material:material:$materialVersion"
 
     //Mapbox
     implementation 'com.mapbox.mapboxsdk:mapbox-android-sdk:8.5.0'
