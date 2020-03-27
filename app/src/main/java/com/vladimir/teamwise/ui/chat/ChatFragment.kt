@@ -9,6 +9,7 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 
 import com.vladimir.teamwise.R
+import kotlinx.android.synthetic.main.host_activity.*
 
 class ChatFragment : Fragment() {
 
@@ -27,6 +28,8 @@ class ChatFragment : Fragment() {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        activity?.bottom_nav_view?.visibility = View.VISIBLE
+        activity?.toolbar?.visibility = View.VISIBLE
         viewModel = ViewModelProvider(this).get(ChatViewModel::class.java)
         // TODO: Use the ViewModel
     }

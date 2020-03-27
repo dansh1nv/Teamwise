@@ -22,6 +22,7 @@ import com.mapbox.mapboxsdk.maps.Style
 import com.mapbox.mapboxsdk.plugins.localization.LocalizationPlugin
 import com.mapbox.mapboxsdk.plugins.localization.MapLocale
 import com.vladimir.teamwise.R
+import kotlinx.android.synthetic.main.host_activity.*
 import timber.log.Timber
 
 
@@ -111,6 +112,8 @@ class SearchFragment : Fragment(), OnMapReadyCallback, PermissionsListener {
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
+        activity?.bottom_nav_view?.visibility = View.VISIBLE
+        activity?.toolbar?.visibility = View.VISIBLE
         viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
         if (savedInstanceState != null) {
             mapView.onSaveInstanceState(savedInstanceState)
