@@ -7,7 +7,7 @@
 
     <fragment
         android:id="@+id/information_dest"
-        android:name="com.vladimir.teamwise.ui.information.InformationFragment"
+        android:name="com.vladimir.teamwise.feature.information.InformationFragment"
         android:label="information_fragment"
         tools:layout="@layout/information_fragment" >
         <argument
@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/informaion_detail_dest"
-        android:name="com.vladimir.teamwise.ui.informationdetail.InformaionDetailFragment"
+        android:name="com.vladimir.teamwise.feature.informationdetail.InformaionDetailFragment"
         android:label="informaion_detail_fragment"
         tools:layout="@layout/informaion_detail_fragment">
         <argument
@@ -36,7 +36,7 @@
 
     <fragment
         android:id="@+id/search_dest"
-        android:name="com.vladimir.teamwise.ui.search.SearchFragment"
+        android:name="com.vladimir.teamwise.feature.search.SearchFragment"
         android:label="search_fragment"
         tools:layout="@layout/search_fragment">
         <argument
@@ -47,14 +47,14 @@
 
     <fragment
         android:id="@+id/addition_dest"
-        android:name="com.vladimir.teamwise.ui.addition.AdditionFragment"
+        android:name="com.vladimir.teamwise.feature.addition.AdditionFragment"
         android:label="addition_fragment"
         tools:layout="@layout/addition_fragment">
     </fragment>
 
     <fragment
         android:id="@+id/chatroom_dest"
-        android:name="com.vladimir.teamwise.ui.chatroom.ChatRoomFragment"
+        android:name="com.vladimir.teamwise.feature.chatroom.ChatRoomFragment"
         android:label="chat_fragment"
         tools:layout="@layout/chatroom_fragment" >
         <action
@@ -68,7 +68,7 @@
 
     <fragment
         android:id="@+id/chat_dest"
-        android:name="com.vladimir.teamwise.ui.chat.ChatFragment"
+        android:name="com.vladimir.teamwise.feature.chat.ChatFragment"
         android:label="chat_fragment"
         tools:layout="@layout/chat_fragment">
         <argument
@@ -79,14 +79,14 @@
 
     <fragment
         android:id="@+id/profile_dest"
-        android:name="com.vladimir.teamwise.ui.profile.ProfileFragment"
+        android:name="com.vladimir.teamwise.feature.profile.ProfileFragment"
         android:label="profile_fragment"
         tools:layout="@layout/profile_fragment">
     </fragment>
 
     <fragment
         android:id="@+id/start_dest"
-        android:name="com.vladimir.teamwise.ui.start.StartFragment"
+        android:name="com.vladimir.teamwise.feature.start.StartFragment"
         android:label="StartFragment">
         <action
             android:id="@+id/reg_action"
@@ -106,7 +106,7 @@
 
     <fragment
         android:id="@+id/registration_dest"
-        android:name="com.vladimir.teamwise.ui.registration.RegistrationFragment"
+        android:name="com.vladimir.teamwise.feature.registration.RegistrationFragment"
         android:label="registration_fragment"
         tools:layout="@layout/registration_fragment">
         <argument
@@ -124,7 +124,7 @@
 
     <fragment
         android:id="@+id/auth_dest"
-        android:name="com.vladimir.teamwise.ui.auth.AuthFragment"
+        android:name="com.vladimir.teamwise.feature.auth.AuthFragment"
         android:label="auth_fragment"
         tools:layout="@layout/auth_fragment">
         <argument
@@ -143,7 +143,7 @@
 
     <fragment
         android:id="@+id/settings_dest"
-        android:name="com.vladimir.teamwise.ui.settings.SettingsFragment"
+        android:name="com.vladimir.teamwise.feature.settings.SettingsFragment"
         android:label="settings_fragment"
         tools:layout="@layout/settings_fragment">
         <argument
