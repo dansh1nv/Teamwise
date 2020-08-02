@@ -1,53 +1,61 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:background="@color/loginPageBackgroundColor">
+<layout>
 
-    <LinearLayout
+    <data>
+
+        <variable
+            name="vm"
+            type="com.vladimir.teamwise.feature.start.StartViewModel" />
+    </data>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:clipChildren="false"
-        android:clipToPadding="false"
-        android:orientation="vertical"
-        android:padding="24dp"
-        android:paddingTop="16dp">
+        android:layout_height="match_parent"
+        android:background="@color/loginPageBackgroundColor">
 
-        <ImageView
-            android:id="@+id/tw_auth_logo"
-            android:layout_width="@dimen/logo"
-            android:layout_height="@dimen/logo"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginTop="48dp"
-            android:layout_marginBottom="16dp"
-            android:src="@drawable/tw_logo" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="70dp"
-            android:text="@string/app_name"
-            android:textAllCaps="true"
-            android:textAppearance="@style/TextAppearance.Teamwise.Title"
-            android:textSize="16sp" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/reg_button"
-            style="@style/Widget.Teamwise.Button"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:padding="@dimen/large"
-            android:text="@string/reg_button" />
+            android:clipChildren="false"
+            android:clipToPadding="false"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:paddingTop="16dp">
 
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/auth_button"
-            style="@style/Widget.Teamwise.Button.TextButton.OutlinedButton"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:padding="@dimen/large"
-            android:text="@string/auth_button" />
-    </LinearLayout>
+            <ImageView
+                android:id="@+id/tw_auth_logo"
+                android:layout_width="@dimen/logo"
+                android:layout_height="@dimen/logo"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="48dp"
+                android:layout_marginBottom="16dp"
+                android:src="@drawable/tw_logo" />
 
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginBottom="70dp"
+                android:text="@string/app_name"
+                android:textAllCaps="true"
+                android:textAppearance="@style/TextAppearance.Teamwise.Title"
+                android:textSize="16sp" />
 
-</ScrollView>
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/reg_button"
+                style="@style/Widget.Teamwise.Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/large"
+                android:text="@string/reg_button" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/auth_button"
+                style="@style/Widget.Teamwise.Button.TextButton.OutlinedButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/large"
+                android:text="@string/auth_button" />
+        </LinearLayout>
+    </ScrollView>
+</layout>

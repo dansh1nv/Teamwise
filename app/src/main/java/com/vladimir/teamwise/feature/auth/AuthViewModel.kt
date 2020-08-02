@@ -1,7 +1,14 @@
 package com.vladimir.teamwise.feature.auth
 
+import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
 class AuthViewModel : ViewModel() {
-    // TODO: Implement the ViewModel
+
+    /**Введенный логин*/
+    val enteredLogin = MutableLiveData("")
+
+    /**Введенный пароль*/
+    val enteredPassword = MutableLiveData("")
+
 }

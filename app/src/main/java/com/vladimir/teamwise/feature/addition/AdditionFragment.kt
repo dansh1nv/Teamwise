@@ -20,15 +20,16 @@ class AdditionFragment : Fragment() {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.addition_fragment, container, false)
-    }
+    ): View? = inflater.inflate(R.layout.addition_fragment, container, false)
+
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         activity?.bottom_nav_view?.visibility = View.VISIBLE
         activity?.toolbar?.visibility = View.VISIBLE
-        viewModel = ViewModelProvider(this).get(AdditionViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(AdditionViewModel::class.java).apply {
+
+        }
         // TODO: Use the ViewModel
     }
 
