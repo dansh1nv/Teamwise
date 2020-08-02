@@ -1,9 +1,9 @@
 <resources>
-    <string name="tw_app_name">Teamwise</string>
+    <string name="app_name">Teamwise</string>
     <string name="mapbox_access_token">
         pk.eyJ1IjoiZGFuc2gxbnYiLCJhIjoiY2syamozMWU4MHB5eTNtb2V6bXg1dDhpNyJ9.k0vnLpoJKzx3rrLnMOn93Q
     </string>
-    <string name="tw_logo_content_description">Teamwise Logo</string>
+    <string name="logo_content_description">Teamwise Logo</string>
 
     <!--Menu-->
     <string name="menu_profile">Профиль</string>
@@ -13,7 +13,7 @@
     <string name="menu_information">Лента</string>
 
     <!--Addition Fragment-->
-    <string name="addition_information">Чтобы пригласить участников, опишите свое мероприятие, добавьте фотографии и разместите у себя в ленте</string>
+    <string name="addition_label_information">Чтобы пригласить участников, опишите свое мероприятие, добавьте фотографии и разместите у себя в ленте</string>
     <string name="addition_date">Введите дату</string>
     <string name="addition_description">Описание</string>
     <string name="addition_name">Название</string>
@@ -53,7 +53,7 @@
     <string name="user_location_permission_not_granted">You didn\'t grant location permissions.</string>
     <!---->
 
-    <string name="find_interesting">Интересное рядом</string>
+    <string name="search_find_interesting">Интересное рядом</string>
     <!---->
 
     <string name="reg_button">Создать аккаунт</string>
@@ -63,10 +63,10 @@
     <string name="tw_button_back">Назад</string>
     <string name="tw_button_auth">Войти</string>
     <string name="tw_button_reg">Регистрация</string>
-    <string name="tw_hint_email">Эл.почта</string>
-    <string name="tw_hint_userinfo">Имя и фамилия</string>
-    <string name="tw_text_view_emptylist">Список событий пуст</string>
-    <string name="tw_text_view_emptyList">Список чатов пуст</string>
+    <string name="registration_email">Эл.почта</string>
+    <string name="registration_userinfo">Имя и фамилия</string>
+    <string name="information_emptylist">Список событий пуст</string>
+    <string name="chatroom_emptylist">Список чатов пуст</string>
     <!---->
 
 </resources>

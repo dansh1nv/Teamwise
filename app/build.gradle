@@ -6,7 +6,7 @@ apply plugin: 'kotlin-kapt'
 
 android {
     compileSdkVersion 29
-    buildToolsVersion "29.0.2"
+    buildToolsVersion "29.0.3"
     defaultConfig {
         applicationId "com.vladimir.teamwise"
         minSdkVersion 21
@@ -20,6 +20,9 @@ android {
             minifyEnabled false
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
         }
+    }
+    packagingOptions {
+        exclude 'META-INF/atomicfu.kotlin_module'
     }
     compileOptions {
         sourceCompatibility = 1.8
@@ -37,6 +40,7 @@ android {
 
 dependencies {
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation "com.facebook.stetho:stetho:1.5.1"
     implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk7:$kotlinVersion"
     implementation "androidx.appcompat:appcompat:$appCompatVersion"
     implementation "androidx.core:core-ktx:$coreVersion"

@@ -29,7 +29,7 @@
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="30dp"
-            android:text="@string/tw_app_name"
+            android:text="@string/app_name"
             android:textAllCaps="true"
             android:textAppearance="@style/TextAppearance.Teamwise.Title"
             android:textSize="16sp" />
@@ -39,7 +39,7 @@
             style="@style/Widget.Teamwise.TextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/tw_hint_email">
+            android:hint="@string/registration_email">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -53,7 +53,7 @@
             style="@style/Widget.Teamwise.TextInputLayout"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:hint="@string/tw_hint_userinfo">
+            android:hint="@string/registration_userinfo">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"

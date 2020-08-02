@@ -19,7 +19,7 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/large"
             android:layout_marginBottom="@dimen/small"
-            android:text="@string/addition_information"
+            android:text="@string/addition_label_information"
             android:textStyle="bold" />
 
         <com.google.android.material.textfield.TextInputLayout
