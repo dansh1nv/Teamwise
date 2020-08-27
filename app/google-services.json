@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1040473299129",
+    "firebase_url": "https://teamwise-8897d.firebaseio.com",
+    "project_id": "teamwise-8897d",
+    "storage_bucket": "teamwise-8897d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1040473299129:android:12804c4fd4a411adde2368",
+        "android_client_info": {
+          "package_name": "com.vladimir.teamwise"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1040473299129-ri71fgceu4l9merikmg73dlfk1eu44j8.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCPj8dVF0QOJ1-tx8PfFks9m1esU2LvGYw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1040473299129-ri71fgceu4l9merikmg73dlfk1eu44j8.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

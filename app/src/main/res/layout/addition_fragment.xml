@@ -4,6 +4,7 @@
     tools:context=".feature.addition.AdditionFragment">
 
     <data>
+
         <variable
             name="vm"
             type="com.vladimir.teamwise.feature.addition.AdditionViewModel" />
@@ -56,8 +57,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:text="@={vm.eventDescription}"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:text="@={vm.eventDescription}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <com.google.android.material.textfield.TextInputLayout
@@ -71,8 +72,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:text="@={vm.eventDate}"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:text="@={vm.eventDate}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <LinearLayout
@@ -119,8 +120,8 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:inputType="text"
-                    android:text="@={vm.addedTags}"
-                    android:maxLines="1" />
+                    android:maxLines="1"
+                    android:text="@={vm.addedTags}" />
             </com.google.android.material.textfield.TextInputLayout>
 
             <me.gujun.android.taggroup.TagGroup
