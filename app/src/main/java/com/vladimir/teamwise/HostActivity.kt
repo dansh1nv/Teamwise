@@ -10,6 +10,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.room.Room
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.mapbox.mapboxsdk.Mapbox
+import com.parse.ParseInstallation
 import com.vladimir.teamwise.data.db.AppDatabase
 import kotlinx.android.synthetic.main.host_activity.*
 
@@ -24,6 +25,7 @@ class HostActivity : AppCompatActivity() {
         setSupportActionBar(toolbar)
 
         Mapbox.getInstance(applicationContext, getString(R.string.mapbox_access_token))
+        ParseInstallation.getCurrentInstallation().saveInBackground()
 
         initDatabase()
         initNavigation()

@@ -4,6 +4,10 @@
         pk.eyJ1IjoiZGFuc2gxbnYiLCJhIjoiY2syamozMWU4MHB5eTNtb2V6bXg1dDhpNyJ9.k0vnLpoJKzx3rrLnMOn93Q
     </string>
     <string name="logo_content_description">Teamwise Logo</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <!-- Change the following strings as required -->
+    <string name="back4app_app_id">3vUOUKkN4abdEy9ijyiU1HfNSYdPgb66YF7txDtf</string>
+    <string name="back4app_client_key">8Tt8mtxYAMGOqVPh6XYLbSayXGsgVCBQ1x3yFypD</string>
 
     <!--Menu-->
     <string name="menu_profile">Профиль</string>
