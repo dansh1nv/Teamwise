@@ -26,17 +26,13 @@ import timber.log.Timber
 
 class SearchFragment : Fragment(), OnMapReadyCallback, PermissionsListener {
 
-    companion object {
-        fun newInstance() = SearchFragment()
-    }
-
     val RUSSIAN = MapLocale("name_ru")
 
     private lateinit var viewModel: SearchViewModel
+
     private lateinit var mapView: MapView
     private lateinit var mMapBoxMap: MapboxMap
     private lateinit var  permissionsManager : PermissionsManager
-
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -153,4 +149,7 @@ class SearchFragment : Fragment(), OnMapReadyCallback, PermissionsListener {
         mapView.onDestroy()
     }
 
+    companion object {
+        fun newInstance() = SearchFragment()
+    }
 }

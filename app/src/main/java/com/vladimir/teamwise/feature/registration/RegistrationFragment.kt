@@ -10,22 +10,12 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 
 import com.vladimir.teamwise.R
+import com.vladimir.teamwise.platform.BaseFragment
 import kotlinx.android.synthetic.main.host_activity.*
 
-class RegistrationFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = RegistrationFragment()
-    }
+class RegistrationFragment : BaseFragment(R.layout.registration_fragment) {
 
     private lateinit var viewModel: RegistrationViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.registration_fragment, container, false)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,4 +34,7 @@ class RegistrationFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
+    companion object {
+        fun newInstance() = RegistrationFragment()
+    }
 }

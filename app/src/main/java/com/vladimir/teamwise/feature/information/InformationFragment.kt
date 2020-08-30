@@ -7,23 +7,13 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.vladimir.teamwise.R
+import com.vladimir.teamwise.platform.BaseFragment
 import kotlinx.android.synthetic.main.host_activity.*
 
 
-class InformationFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = InformationFragment()
-    }
+class InformationFragment : BaseFragment(R.layout.information_fragment) {
 
     private lateinit var viewModel: InformationViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.information_fragment, container, false)
-    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -33,4 +23,7 @@ class InformationFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
+    companion object {
+        fun newInstance() = InformationFragment()
+    }
 }

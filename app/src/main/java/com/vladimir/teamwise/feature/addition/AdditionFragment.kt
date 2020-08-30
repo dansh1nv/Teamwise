@@ -7,21 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.vladimir.teamwise.R
+import com.vladimir.teamwise.platform.BaseFragment
 import kotlinx.android.synthetic.main.host_activity.*
 
-class AdditionFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = AdditionFragment()
-    }
+class AdditionFragment : BaseFragment(R.layout.addition_fragment) {
 
     private lateinit var viewModel: AdditionViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? = inflater.inflate(R.layout.addition_fragment, container, false)
-
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -33,4 +24,7 @@ class AdditionFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
+    companion object {
+        fun newInstance() = AdditionFragment()
+    }
 }

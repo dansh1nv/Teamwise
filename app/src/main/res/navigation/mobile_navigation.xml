@@ -25,7 +25,7 @@
 
     <fragment
         android:id="@+id/informaion_detail_dest"
-        android:name="com.vladimir.teamwise.feature.informationdetail.InformaionDetailFragment"
+        android:name="com.vladimir.teamwise.feature.informationdetail.InformationDetailFragment"
         android:label="informaion_detail_fragment"
         tools:layout="@layout/informaion_detail_fragment">
         <argument

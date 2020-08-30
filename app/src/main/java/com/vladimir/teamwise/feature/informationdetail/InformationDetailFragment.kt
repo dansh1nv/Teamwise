@@ -7,29 +7,22 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.vladimir.teamwise.R
+import com.vladimir.teamwise.platform.BaseFragment
 import kotlinx.android.synthetic.main.host_activity.*
 
-class InformaionDetailFragment : Fragment() {
+class InformationDetailFragment : BaseFragment(R.layout.informaion_detail_fragment) {
 
-    companion object {
-        fun newInstance() = InformaionDetailFragment()
-    }
-
-    private lateinit var viewModel: InformaionDetailViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.informaion_detail_fragment, container, false)
-    }
+    private lateinit var viewModel: InformationDetailViewModel
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
         activity?.bottom_nav_view?.visibility = View.VISIBLE
         activity?.toolbar?.visibility = View.VISIBLE
-        viewModel = ViewModelProvider(this).get(InformaionDetailViewModel::class.java)
+        viewModel = ViewModelProvider(this).get(InformationDetailViewModel::class.java)
         // TODO: Use the ViewModel
     }
 
+    companion object {
+        fun newInstance() = InformationDetailFragment()
+    }
 }

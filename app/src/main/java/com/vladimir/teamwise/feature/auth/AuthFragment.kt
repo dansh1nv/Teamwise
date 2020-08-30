@@ -8,23 +8,13 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.vladimir.teamwise.R
+import com.vladimir.teamwise.platform.BaseFragment
 import kotlinx.android.synthetic.main.auth_fragment.*
 import kotlinx.android.synthetic.main.host_activity.*
 
-class AuthFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = AuthFragment()
-    }
+class AuthFragment : BaseFragment(R.layout.auth_fragment) {
 
     private lateinit var viewModel: AuthViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.auth_fragment, container, false)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,4 +34,7 @@ class AuthFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
+    companion object {
+        fun newInstance() = AuthFragment()
+    }
 }

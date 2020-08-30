@@ -2,6 +2,6 @@ package com.vladimir.teamwise.feature.informationdetail
 
 import androidx.lifecycle.ViewModel
 
-class InformaionDetailViewModel : ViewModel() {
+class InformationDetailViewModel : ViewModel() {
     // TODO: Implement the ViewModel
 }

@@ -7,22 +7,12 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.vladimir.teamwise.R
+import com.vladimir.teamwise.platform.BaseFragment
 import kotlinx.android.synthetic.main.host_activity.*
 
-class SettingsFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = SettingsFragment()
-    }
+class SettingsFragment : BaseFragment(R.layout.settings_fragment) {
 
     private lateinit var viewModel: SettingsViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.settings_fragment, container, false)
-    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -32,4 +22,7 @@ class SettingsFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
+    companion object {
+        fun newInstance() = SettingsFragment()
+    }
 }

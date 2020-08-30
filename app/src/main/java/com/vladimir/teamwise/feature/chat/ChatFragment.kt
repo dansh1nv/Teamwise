@@ -8,22 +8,12 @@ import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
 
 import com.vladimir.teamwise.R
+import com.vladimir.teamwise.platform.BaseFragment
 import kotlinx.android.synthetic.main.host_activity.*
 
-class ChatFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = ChatFragment()
-    }
+class ChatFragment : BaseFragment(R.layout.chat_fragment) {
 
     private lateinit var viewModel: ChatViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.chat_fragment, container, false)
-    }
 
     override fun onActivityCreated(savedInstanceState: Bundle?) {
         super.onActivityCreated(savedInstanceState)
@@ -33,4 +23,7 @@ class ChatFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
+    companion object {
+        fun newInstance() = ChatFragment()
+    }
 }

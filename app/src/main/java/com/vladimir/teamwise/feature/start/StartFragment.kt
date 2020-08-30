@@ -1,42 +1,30 @@
 package com.vladimir.teamwise.feature.start
 
 import android.os.Bundle
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
-import android.widget.Button
-import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import com.vladimir.teamwise.R
+import com.vladimir.teamwise.platform.BaseFragment
 import kotlinx.android.synthetic.main.host_activity.*
+import kotlinx.android.synthetic.main.registration_fragment.reg_button
+import kotlinx.android.synthetic.main.start_fragment.*
 
 
-class StartFragment : Fragment() {
-
-    companion object {
-        fun newInstance() = StartFragment()
-    }
+class StartFragment : BaseFragment(R.layout.start_fragment) {
 
     private lateinit var viewModel: StartViewModel
-
-    override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
-        savedInstanceState: Bundle?
-    ): View? {
-        return inflater.inflate(R.layout.start_fragment, container, false)
-    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        view.findViewById<Button>(R.id.reg_button)?.setOnClickListener {
+        reg_button?.setOnClickListener {
             val regStringArg = "registration"
             val action = StartFragmentDirections.regAction(regStringArg)
             findNavController().navigate(action)
         }
 
-        view.findViewById<Button>(R.id.auth_button)?.setOnClickListener() {
+        auth_button?.setOnClickListener {
             val authStringArg = "auth"
             val action = StartFragmentDirections.authAction(authStringArg)
             findNavController().navigate(action)
@@ -51,4 +39,7 @@ class StartFragment : Fragment() {
         // TODO: Use the ViewModel
     }
 
+    companion object {
+        fun newInstance() = StartFragment()
+    }
 }

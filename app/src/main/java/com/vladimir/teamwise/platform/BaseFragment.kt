@@ -1,4 +1,4 @@
-package com.vladimir.forasofttesttask.platform
+package com.vladimir.teamwise.platform
 
 import android.os.Bundle
 import androidx.annotation.LayoutRes
