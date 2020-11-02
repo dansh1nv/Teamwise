@@ -87,8 +87,7 @@ dependencies {
     // ViewModel
     implementation "androidx.lifecycle:lifecycle-extensions:$lifecycleVersion"
     implementation "androidx.lifecycle:lifecycle-viewmodel-ktx:$lifecycleVersion"
-    implementation "androidx.lifecycle:lifecycle-livedata:$lifecycleVersion"
-    kapt "androidx.lifecycle:lifecycle-compiler:$lifecycleVersion"
+    implementation "androidx.lifecycle:lifecycle-livedata-ktx:$lifecycleVersion"
 
     //Tags view
     implementation 'me.gujun.android.taggroup:library:1.4@aar'
@@ -101,10 +100,16 @@ dependencies {
     implementation 'com.mapbox.mapboxsdk:mapbox-android-plugin-localization-v8:0.11.0'
 
     // Preference
-    implementation "androidx.preference:preference:1.1.0"
+    implementation "androidx.preference:preference-ktx:1.1.1"
 
     //Service location
-    implementation "com.google.android.gms:play-services-location:17.0.0"
+    implementation "com.google.android.gms:play-services-location:17.1.0"
+
+    // Import the Firebase BoM
+    implementation platform('com.google.firebase:firebase-bom:26.0.0')
+
+    // Declare the dependency for the Firebase SDK for Google Analytics
+    implementation 'com.google.firebase:firebase-analytics-ktx'
 
     //
     implementation "com.github.parse-community.Parse-SDK-Android:parse:$parseVersion"

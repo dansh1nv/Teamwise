@@ -11,7 +11,10 @@ import androidx.navigation.fragment.findNavController
 
 import com.vladimir.teamwise.R
 import com.vladimir.teamwise.platform.BaseFragment
+import com.vladimir.teamwise.platform.Constants
+import com.vladimir.teamwise.platform.Constants.INFORMATION_ARG
 import kotlinx.android.synthetic.main.host_activity.*
+import kotlinx.android.synthetic.main.registration_fragment.*
 
 class RegistrationFragment : BaseFragment(R.layout.registration_fragment) {
 
@@ -19,9 +22,9 @@ class RegistrationFragment : BaseFragment(R.layout.registration_fragment) {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        view.findViewById<Button>(R.id.reg_button).setOnClickListener {
-            val informationStringArg = "information"
-            val action = RegistrationFragmentDirections.nextAction(informationStringArg)
+        reg_button.setOnClickListener {
+            viewModel.registration()
+            val action = RegistrationFragmentDirections.nextAction(INFORMATION_ARG)
             findNavController().navigate(action)
         }
     }
