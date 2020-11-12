@@ -7,36 +7,30 @@ import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
 import androidx.navigation.ui.setupWithNavController
 import androidx.room.Room
-import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.mapbox.mapboxsdk.Mapbox
-import com.parse.ParseInstallation
-import com.parse.ParseObject
-import com.parse.ParseUser
 import com.vladimir.teamwise.data.db.AppDatabase
-import kotlinx.android.synthetic.main.host_activity.*
+import com.vladimir.teamwise.databinding.HostActivityBinding
+import com.vladimir.teamwise.platform.Constants.TEAMWISE_DB
 
 class HostActivity : AppCompatActivity() {
 
     private lateinit var navController: NavController
     private lateinit var appBarConfiguration: AppBarConfiguration
+    private lateinit var binding: HostActivityBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.host_activity)
-        setSupportActionBar(toolbar)
-
+        binding = HostActivityBinding.inflate(layoutInflater)
+        val view = binding.root
         Mapbox.getInstance(applicationContext, getString(R.string.mapbox_access_token))
-        ParseInstallation.getCurrentInstallation().saveInBackground()
-
+        setContentView(view)
         initDatabase()
         initNavigation()
     }
 
     private fun initDatabase() {
-        val db = Room.databaseBuilder(
-            applicationContext,
-            AppDatabase::class.java, "teamwise.db"
-        ).build()
+        val db =
+            Room.databaseBuilder(applicationContext, AppDatabase::class.java, TEAMWISE_DB).build()
     }
 
     private fun initNavigation() {
@@ -49,7 +43,6 @@ class HostActivity : AppCompatActivity() {
     }
 
     private fun setupBottomNavMenu(navController: NavController) {
-        val bottomNav = findViewById<BottomNavigationView>(R.id.bottom_nav_view)
-        bottomNav?.setupWithNavController(navController)
+        binding.bottomNavView.setupWithNavController(navController)
     }
 }

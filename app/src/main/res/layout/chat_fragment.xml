@@ -10,15 +10,19 @@
             type="com.vladimir.teamwise.feature.chat.ChatViewModel" />
     </data>
 
-    <FrameLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-        <TextView
+        <FrameLayout
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Chat FRAGMENT" />
+            android:layout_height="match_parent">
 
-    </FrameLayout>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Chat FRAGMENT" />
 
+        </FrameLayout>
+    </ScrollView>
 </layout>

@@ -7,25 +7,25 @@ import androidx.room.PrimaryKey
 @Entity(tableName = "user_table")
 data class User (
     @PrimaryKey(autoGenerate = true)
-    var id: Int = 0,
+    val id: Int = 0,
     @ColumnInfo(name = "firstName")
-    var firstName: String,
+    val firstName: String,
     @ColumnInfo(name = "lastName")
-    var lastName: String,
+    val lastName: String,
     @ColumnInfo(name = "userName")
-    var userName: String,
+    val userName: String,
     @ColumnInfo(name = "city")
-    var city: String,
+    val city: String,
     @ColumnInfo(name = "photo")
-    var photo: String,
+    val photo: String,
     @ColumnInfo(name = "description")
-    var description: String,
+    val description: String,
     @ColumnInfo(name = "countHost")
-    var countHost: Int,
+    val countHost: Int,
     @ColumnInfo(name = "countMember")
-    var countMember: Int,
+    val countMember: Int,
     @ColumnInfo(name = "countSubscription")
-    var countSubscription: Int,
+    val countSubscription: Int,
     @ColumnInfo(name = "countSubscribe")
-    var countSubscribe: Int
+    val countSubscribe: Int
 )

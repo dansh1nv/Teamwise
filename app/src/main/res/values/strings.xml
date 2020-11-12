@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">Teamwise</string>
     <string name="mapbox_access_token">
-        pk.eyJ1IjoiZGFuc2gxbnYiLCJhIjoiY2syamozMWU4MHB5eTNtb2V6bXg1dDhpNyJ9.k0vnLpoJKzx3rrLnMOn93Q
+        sk.eyJ1IjoiZGFuc2gxbnYiLCJhIjoiY2toZjdqNXZpMGY2dzJ6bHVydGg2czZ4aiJ9.691C_kflDclczP_2dFAEeA
     </string>
     <string name="logo_content_description">Teamwise Logo</string>
     <string name="vk_access_token">pqib0o8FUCObvQBLehrI</string>

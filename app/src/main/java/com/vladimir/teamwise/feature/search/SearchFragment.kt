@@ -10,6 +10,7 @@ import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.mapbox.android.core.permissions.PermissionsListener
 import com.mapbox.android.core.permissions.PermissionsManager
+import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.location.LocationComponentActivationOptions
 import com.mapbox.mapboxsdk.location.modes.CameraMode
 import com.mapbox.mapboxsdk.location.modes.RenderMode
@@ -20,13 +21,12 @@ import com.mapbox.mapboxsdk.maps.Style
 import com.mapbox.mapboxsdk.plugins.localization.LocalizationPlugin
 import com.mapbox.mapboxsdk.plugins.localization.MapLocale
 import com.vladimir.teamwise.R
-import kotlinx.android.synthetic.main.host_activity.*
 import timber.log.Timber
 
 
 class SearchFragment : Fragment(), OnMapReadyCallback, PermissionsListener {
 
-    val RUSSIAN = MapLocale("name_ru")
+    private val RUSSIAN = MapLocale("name_ru")
 
     private lateinit var viewModel: SearchViewModel
 
@@ -104,10 +104,8 @@ class SearchFragment : Fragment(), OnMapReadyCallback, PermissionsListener {
         }
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        activity?.bottom_nav_view?.visibility = View.VISIBLE
-        activity?.toolbar?.visibility = View.VISIBLE
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
         viewModel = ViewModelProvider(this).get(SearchViewModel::class.java)
         if (savedInstanceState != null) {
             mapView.onSaveInstanceState(savedInstanceState)

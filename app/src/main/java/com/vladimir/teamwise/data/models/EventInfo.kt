@@ -1,8 +1,8 @@
 package com.vladimir.teamwise.data.models
 
 data class EventInfo (
-    var eventTitle: String?,
-    var eventPhoto : String?,
-    var eventCreator : String?,
-    var eventInformation : String?
+    val eventTitle: String?,
+    val eventPhoto : String?,
+    val eventCreator : String?,
+    val eventInformation : String?
 )
