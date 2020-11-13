@@ -3,7 +3,7 @@
 buildscript {
 
     ext {
-        kotlinVersion = "1.4.20-M2"
+        kotlinVersion = "1.4.20-RC"
         roomVersion = "2.2.5"
         navigationVersion = "2.3.1"
         lifecycleVersion = "2.2.0"
