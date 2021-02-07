@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.NavController
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.AppBarConfiguration
+import androidx.navigation.ui.setupWithNavController
 import androidx.room.Room
 import com.mapbox.mapboxsdk.Mapbox
 import com.vladimir.teamwise.data.db.AppDatabase
@@ -20,13 +21,12 @@ class HostActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.host_activity)
-       /* binding = HostActivityBinding.inflate(layoutInflater)
+        binding = HostActivityBinding.inflate(layoutInflater)
         val view = binding.root
-        Mapbox.getInstance(applicationContext, getString(R.string.mapbox_access_token))
         setContentView(view)
-        initDatabase()
-        initNavigation()*/
         Mapbox.getInstance(applicationContext, getString(R.string.mapbox_access_token))
+        initDatabase()
+        initNavigation()
         initNavigation()
     }
 
@@ -37,7 +37,7 @@ class HostActivity : AppCompatActivity() {
 
     private fun initNavigation() {
         val host: NavHostFragment = supportFragmentManager
-            .findFragmentById(R.id.mainHostFragment) as NavHostFragment? ?: return
+            .findFragmentById(R.id.mainHostFragment) as NavHostFragment
         navController = host.navController
         appBarConfiguration = AppBarConfiguration(navController.graph)
 
@@ -45,6 +45,6 @@ class HostActivity : AppCompatActivity() {
     }
 
     private fun setupBottomNavMenu(navController: NavController) {
-       // binding.bottomNavView.setupWithNavController(navController)
+        binding.bottomNavView.setupWithNavController(navController)
     }
 }
