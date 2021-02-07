@@ -7,7 +7,9 @@ import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.vladimir.teamwise.R
+import com.vladimir.teamwise.databinding.ChatFragmentBinding
 import com.vladimir.teamwise.platform.BaseFragment
+import com.vladimir.teamwise.platform.core.viewBinding
 
 class ChatRoomFragment : BaseFragment(R.layout.chatroom_fragment) {
 

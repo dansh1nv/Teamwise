@@ -87,7 +87,8 @@
     <fragment
         android:id="@+id/start_dest"
         android:name="com.vladimir.teamwise.feature.start.StartFragment"
-        android:label="StartFragment">
+        android:label="StartFragment"
+        tools:layout="@layout/start_fragment">
         <action
             android:id="@+id/reg_action"
             app:destination="@+id/registration_dest"

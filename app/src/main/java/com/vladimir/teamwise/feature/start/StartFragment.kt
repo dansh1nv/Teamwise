@@ -7,24 +7,25 @@ import androidx.navigation.fragment.findNavController
 import com.vladimir.teamwise.R
 import com.vladimir.teamwise.databinding.StartFragmentBinding
 import com.vladimir.teamwise.platform.BaseFragment
+import com.vladimir.teamwise.platform.Constants
+import com.vladimir.teamwise.platform.Constants.AUTH_ARGUMENT
+import com.vladimir.teamwise.platform.Constants.REGISTRATION_ARGUMENT
+import com.vladimir.teamwise.platform.core.viewBinding
 
 class StartFragment : BaseFragment(R.layout.start_fragment) {
 
     private lateinit var viewModel: StartViewModel
-    private lateinit var binding: StartFragmentBinding
+    private val binding by viewBinding(StartFragmentBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding = StartFragmentBinding.inflate(layoutInflater)
         binding.regButton.setOnClickListener {
-            val regStringArg = "registration"
-            val action = StartFragmentDirections.regAction(/*regStringArg*/)
+            val action = StartFragmentDirections.regAction(REGISTRATION_ARGUMENT)
             findNavController().navigate(action)
         }
 
         binding.authButton.setOnClickListener {
-            val authStringArg = "auth"
-            val action = StartFragmentDirections.authAction(/*authStringArg*/)
+            val action = StartFragmentDirections.authAction(AUTH_ARGUMENT)
             findNavController().navigate(action)
         }
         viewModel = ViewModelProvider(this).get(StartViewModel::class.java)

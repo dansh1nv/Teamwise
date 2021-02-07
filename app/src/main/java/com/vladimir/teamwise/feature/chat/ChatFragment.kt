@@ -1,18 +1,17 @@
 package com.vladimir.teamwise.feature.chat
 
 import android.os.Bundle
-import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
 import android.view.View
-import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
-
 import com.vladimir.teamwise.R
+import com.vladimir.teamwise.databinding.ChatFragmentBinding
 import com.vladimir.teamwise.platform.BaseFragment
+import com.vladimir.teamwise.platform.core.viewBinding
 
 class ChatFragment : BaseFragment(R.layout.chat_fragment) {
 
     private lateinit var viewModel: ChatViewModel
+    private val binding by viewBinding(ChatFragmentBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

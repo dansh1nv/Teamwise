@@ -21,27 +21,27 @@
             android:clipChildren="false"
             android:clipToPadding="false"
             android:orientation="vertical"
-            android:padding="24dp"
-            android:paddingTop="16dp">
+            android:padding="@dimen/size_24dp"
+            android:paddingTop="@dimen/size_16dp">
 
             <ImageView
                 android:id="@+id/tw_auth_logo"
                 android:layout_width="@dimen/logo"
                 android:layout_height="@dimen/logo"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginTop="30dp"
-                android:layout_marginBottom="16dp"
+                android:layout_marginTop="@dimen/size_30dp"
+                android:layout_marginBottom="@dimen/size_16dp"
                 android:src="@drawable/tw_logo" />
 
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="center_horizontal"
-                android:layout_marginBottom="30dp"
+                android:layout_marginBottom="@dimen/size_30dp"
                 android:text="@string/app_name"
                 android:textAllCaps="true"
                 android:textAppearance="@style/TextAppearance.Teamwise.Title"
-                android:textSize="16sp" />
+                android:textSize="@dimen/text_size_16sp" />
 
             <com.google.android.material.textfield.TextInputLayout
                 android:id="@+id/edit_text_email"
@@ -105,7 +105,7 @@
                     style="@style/Widget.Teamwise.Button.TextButton"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_marginEnd="12dp"
+                    android:layout_marginEnd="@dimen/size_12dp"
                     android:layout_toStartOf="@id/reg_button"
                     android:text="@string/tw_button_back" />
             </RelativeLayout>

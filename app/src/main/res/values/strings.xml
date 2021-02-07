@@ -72,6 +72,7 @@
     <string name="registration_userinfo">Имя и фамилия</string>
     <string name="information_emptylist">Список событий пуст</string>
     <string name="chatroom_emptylist">Список чатов пуст</string>
+    <string name="chat_fragment">Chat FRAGMENT</string>
     <!---->
 
 </resources>

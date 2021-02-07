@@ -7,6 +7,5 @@ class TeamwiseApp : Application() {
     override fun onCreate() {
         super.onCreate()
         Stetho.initializeWithDefaults(this)
-
     }
 }

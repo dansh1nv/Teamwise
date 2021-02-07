@@ -1,16 +1,18 @@
 package com.vladimir.teamwise.feature.search
 
+import android.Manifest
 import android.content.ContentValues.TAG
+import android.content.pm.PackageManager
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.Toast
+import androidx.core.app.ActivityCompat
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
 import com.mapbox.android.core.permissions.PermissionsListener
 import com.mapbox.android.core.permissions.PermissionsManager
-import com.mapbox.mapboxsdk.Mapbox
 import com.mapbox.mapboxsdk.location.LocationComponentActivationOptions
 import com.mapbox.mapboxsdk.location.modes.CameraMode
 import com.mapbox.mapboxsdk.location.modes.RenderMode
@@ -21,6 +23,8 @@ import com.mapbox.mapboxsdk.maps.Style
 import com.mapbox.mapboxsdk.plugins.localization.LocalizationPlugin
 import com.mapbox.mapboxsdk.plugins.localization.MapLocale
 import com.vladimir.teamwise.R
+import com.vladimir.teamwise.databinding.SearchFragmentBinding
+import com.vladimir.teamwise.platform.core.viewBinding
 import timber.log.Timber
 
 
@@ -32,7 +36,10 @@ class SearchFragment : Fragment(), OnMapReadyCallback, PermissionsListener {
 
     private lateinit var mapView: MapView
     private lateinit var mMapBoxMap: MapboxMap
-    private lateinit var  permissionsManager : PermissionsManager
+    private lateinit var permissionsManager: PermissionsManager
+
+    private val binding by viewBinding(SearchFragmentBinding::bind)
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -65,14 +72,29 @@ class SearchFragment : Fragment(), OnMapReadyCallback, PermissionsListener {
             val locationComponent = mMapBoxMap.locationComponent
             // Activate with options
             locationComponent.activateLocationComponent(
-                LocationComponentActivationOptions.builder(activity!!, loadedMapStyle).build()
+                LocationComponentActivationOptions.builder(requireActivity(), loadedMapStyle)
+                    .build()
             )
             // Enable to make component visible
-            locationComponent.isLocationComponentEnabled = true
-            // Set the component's camera mode
-            locationComponent.cameraMode = CameraMode.TRACKING
-            // Set the component's render mode
-            locationComponent.renderMode = RenderMode.COMPASS
+            context?.let {
+                if (ActivityCompat.checkSelfPermission(
+                        it,
+                        Manifest.permission.ACCESS_FINE_LOCATION
+                    ) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(
+                        it,
+                        Manifest.permission.ACCESS_COARSE_LOCATION
+                    ) != PackageManager.PERMISSION_GRANTED
+                ) {
+                    locationComponent.isLocationComponentEnabled = true
+                    // Set the component's camera mode
+                    locationComponent.cameraMode = CameraMode.TRACKING
+                    // Set the component's render mode
+                    locationComponent.renderMode = RenderMode.COMPASS
+                    return
+                }
+            }
+
+
         } else {
             permissionsManager = PermissionsManager(this)
             permissionsManager.requestLocationPermissions(activity)

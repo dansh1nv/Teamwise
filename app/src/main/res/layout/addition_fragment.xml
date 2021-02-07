@@ -124,13 +124,6 @@
                     android:text="@={vm.addedTags}" />
             </com.google.android.material.textfield.TextInputLayout>
 
-            <me.gujun.android.taggroup.TagGroup
-                android:id="@+id/addition_tag_information"
-                style="@style/TagGroup"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="@dimen/small" />
-
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/addition_button_create"
                 style="@style/Widget.Teamwise.Button"

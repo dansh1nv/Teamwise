@@ -14,8 +14,8 @@
 
         <ImageView
             android:id="@+id/chat_photo"
-            android:layout_width="50dp"
-            android:layout_height="50dp"
+            android:layout_width="@dimen/size_50dp"
+            android:layout_height="@dimen/size_50dp"
             android:layout_margin="@dimen/small"
             android:src="@mipmap/ic_launcher"
             app:layout_constraintBottom_toBottomOf="parent"

@@ -10,5 +10,4 @@ abstract class BaseFragment(@LayoutRes contentLayoutId: Int) : Fragment(contentL
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
     }
-
 }

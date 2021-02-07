@@ -7,12 +7,12 @@ import androidx.navigation.fragment.findNavController
 import com.vladimir.teamwise.R
 import com.vladimir.teamwise.databinding.RegistrationFragmentBinding
 import com.vladimir.teamwise.platform.BaseFragment
-import com.vladimir.teamwise.platform.Constants.INFORMATION_ARG
+import com.vladimir.teamwise.platform.core.viewBinding
 
 class RegistrationFragment : BaseFragment(R.layout.registration_fragment) {
 
     private lateinit var viewModel: RegistrationViewModel
-    private lateinit var binding: RegistrationFragmentBinding
+    private val binding by viewBinding(RegistrationFragmentBinding::bind)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
